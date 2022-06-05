@@ -6,7 +6,7 @@ export class Component {
         }
     }
     outerRender(selector) {
-        if (selector && documento.querySelector(selector)) {
+        if (selector && document.querySelector(selector)) {
             document.querySelector(selector).outerHTML = this.template;
         }
     }
