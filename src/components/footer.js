@@ -1,6 +1,6 @@
 import { Component } from './component.js';
 
-export class Header extends Component {
+export class Footer extends Component {
     template = '';
     constructor(selector) {
         super();
@@ -10,6 +10,9 @@ export class Header extends Component {
     }
 
     createTemplate() {
-        return ``;
+        return ` 
+          <footer class="footer">
+            <address>by Sara Carreras✨</address>
+        </footer>`;
     }
 }

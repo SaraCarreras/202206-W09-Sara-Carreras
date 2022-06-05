@@ -1,4 +1,5 @@
 import { Header } from './components/header.js';
+import { Footer } from './components/footer.js';
 
 (() => {
     document.addEventListener('DOMContentLoaded', () => {
@@ -10,4 +11,5 @@ import { Header } from './components/header.js';
 function app() {
     console.log('App Lista');
     new Header('slot.header');
+    new Footer('slot.footer');
 }
