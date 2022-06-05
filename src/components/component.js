@@ -1,12 +1,12 @@
 export class Component {
-    template;
+    template = '';
     render(selector) {
         if (selector && document.querySelector(selector)) {
             document.querySelector(selector).innerHTML = this.template;
         }
     }
     outerRender(selector) {
-        if (selector && documento.querySelector(selector)) {
+        if (selector && document.querySelector(selector)) {
             document.querySelector(selector).outerHTML = this.template;
         }
     }
