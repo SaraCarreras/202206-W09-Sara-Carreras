@@ -1,5 +1,6 @@
 import { Header } from './components/header.js';
 import { Footer } from './components/footer.js';
+import { PokeList } from './components/poke.list.js';
 
 (() => {
     document.addEventListener('DOMContentLoaded', () => {
@@ -21,7 +22,7 @@ import { Footer } from './components/footer.js';
 
 function index() {
     commonComponents();
-    //aquí irá new PokemonsList
+    new PokeList('slot.main-Page');
 }
 function myPokemons() {
     commonComponents();
