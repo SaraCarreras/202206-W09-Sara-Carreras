@@ -9,27 +9,17 @@ import { PokeList } from './components/poke.list.js';
             path[path.length - 1] === '' ||
             path[path.length - 1] === 'index.html'
         ) {
-            index();
+            commonComponents();
+            new PokeList('slot.main-Page');
         } else if (path[path.length - 1] === 'mispokemon.html') {
-            myPokemons();
+            commonComponents();
             //aquí debe cargar componrnte new Milista x ej
         } else if (path[path.length - 1] === 'detalles.html') {
-            details();
+            commonComponents();
         }
         console.log('listener funciona');
     });
 })();
-
-function index() {
-    commonComponents();
-    new PokeList('slot.main-Page');
-}
-function myPokemons() {
-    commonComponents();
-}
-function details() {
-    commonComponents();
-}
 
 function commonComponents() {
     console.log('App Lista');
