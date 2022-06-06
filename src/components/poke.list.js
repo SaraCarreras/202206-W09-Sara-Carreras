@@ -11,6 +11,7 @@ export class PokeList extends Component {
         this.selector = selector;
         this.template = this.createTemplate();
         this.outerRender(this.selector);
+        this.manageComponent();
     }
 
     createTemplate() {
@@ -18,12 +19,26 @@ export class PokeList extends Component {
         let htmlItems = '';
         this.pokemonsArr.forEach((item) => {
             htmlItems += `
-            <li>
+            <li role="button">
                 <a class="pokelist-button__pokemon" role="button" data-id="${item.id}" href=""
                     >${item.name}
                 </a>
             </li>`;
         });
         return `<main><h2>Lista Pokemons con API</h2><ul class="pokelist"> ${htmlItems} </ul> </main>`;
+    }
+
+    manageComponent() {
+        document
+            .querySelectorAll('.pokelist-button__pokemon')
+            .forEach((item) =>
+                item.addEventListener('click', this.handlerButton.bind(this))
+            );
+    }
+
+    handlerButton(ev) {
+        const selectedId = ev.target.dataset.id;
+        console.log('click');
+        console.log(selectedId);
     }
 }
