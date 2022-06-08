@@ -9,8 +9,12 @@ export class PokeList extends Component {
         super();
         this.pokemonsArr = POKEMONS;
         this.selector = selector;
+        this.render();
+    }
+
+    render() {
         this.template = this.createTemplate();
-        this.outerRender(this.selector);
+        super.outerRender(this.selector);
         this.manageComponent();
     }
 
@@ -40,5 +44,15 @@ export class PokeList extends Component {
         const selectedId = ev.target.dataset.id;
         console.log('click');
         console.log(selectedId);
+        this.render();
+        // aqí se aade funcionalidad de añadir de esta lista el pokemon que quiera a SU lista
+        //x ej myList = let add = {id: 4,name: 'añadido'} POKEMONS.push(add)  o con myList[myList.lengt].add
+        //para BORRAR DE MI LISTA: this.myList = this.myList.filter(item => item.id !== +selectedId)
+        //cambiar algun detalle igual es con .map
+
+        // AQÍ IRÁ EL IR A LA PAG DETALLES?? y entonce sluego hay qe hacer todo esto otra vez:
+        /*
+       
+        */
     }
 }
