@@ -1,0 +1,29 @@
+.pokelist li {
+    cursor: pointer;
+    padding: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-shadow: -2px 2px 0 rgba(black, 0.2);
+    font-weight: bold;
+    padding-right: 50px;
+    margin: 10px;
+
+    background: linear-gradient(to bottom, #a2d3e9, #7abedf);
+    box-shadow: -1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb,
+        -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d,
+        -4px 3px 1px #6fadcb, -3px 4px 1px #54809d, -5px 4px 1px #6fadcb;
+}
+
+.pokelist-button__pokemon {
+    text-decoration-line: none;
+    color: aliceblue;
+}
+
+body {
+    padding: 1.2rem;
+}
+
+.navlist {
+    text-decoration-line: none;
+    color: rgb(19, 17, 17);
+}

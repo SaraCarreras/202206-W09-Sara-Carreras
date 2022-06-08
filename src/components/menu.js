@@ -14,7 +14,7 @@ export class Menu extends Component {
     createTemplate() {
         let htmlitems = '';
         this.menu.forEach((item) => {
-            htmlitems += `<li><a href="${item.path}">${item.label}</a></li> `;
+            htmlitems += `<li><a class="navlist"  href="${item.path}">${item.label}</a></li> `;
         });
         return `<nav><ul>${htmlitems}</ul></nav>`;
     }
